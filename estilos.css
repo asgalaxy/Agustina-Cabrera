@@ -1,0 +1,358 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    font-size: 1em;
+    line-height: 1.5em;
+}
+
+header{
+    height: 4em;
+    line-height: 4em;
+    text-align: center;
+}
+
+main{
+    width: 100%;
+    padding-bottom: 5em;
+}
+
+section{
+    width: 100%;
+}
+
+article{
+    width: 100%;
+}
+
+a{
+    text-decoration: none;
+}
+
+a:visited{
+    text-decoration: none;
+    color: #274c77;
+}
+
+a:link{
+    text-decoration: none;
+    color: #274c77;
+}
+
+a:hover{
+    text-decoration: none;
+    color: white;
+    background-color: #274c77;
+}
+
+
+
+p{
+    text-align: center;
+}
+
+#info p{
+    margin: 1em;
+}
+
+h2{
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    color: #274c77;
+    margin: 2em;
+    text-align: center;
+}
+
+
+
+.ilustraciones{
+    padding: 1em;
+}
+
+#datos{
+    background:#274c77;
+    padding: 3em;
+    width: auto;
+    height: 100%;
+    text-align: center;
+    color: white;
+}
+
+.importante{
+    font-size: 1.5em;
+    color: #abc4ff;
+}
+
+.datos{
+    padding-bottom: 3em;
+}
+
+ul li{
+    list-style: none;
+}
+
+#video{
+    padding-bottom: 5em;
+}
+
+.iframe{
+    line-height: 0;
+    text-align: center;
+    width: 80vw;
+    height: calc(80vw * 315 / 560);
+    margin: auto;
+    max-width: 560px;
+    max-height: 315px;
+}
+
+iframe{
+    border: 0;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+}
+
+#profesionales {
+    background-color: #c8b6ff;
+    padding: 2px;
+    padding-bottom: 10em;
+}
+
+
+#profesionales h2{
+    color: white;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+figure{
+    max-width: 1920px;
+    text-align: center;
+}
+
+footer{
+    background-color: #c8b6ff;
+}
+
+.contenedor{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+footer div div p{
+    text-align: left;
+    padding: 1rem;
+    color: white;
+    max-width: 250px;
+}
+
+footer div ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    padding: 1rem;
+    max-width: 200px;
+}
+
+footer div ul li{
+    padding: 0.5rem;
+}
+
+
+@media screen and (max-width: 900px) {
+    
+    h1{
+    
+    font-size: 0;
+    background: url(img/Logo.svg) no-repeat center center scroll;
+    margin: auto;
+    width: 50px;
+    height: 50px;
+    }
+
+    nav ul li{
+        list-style: none;
+        
+    }
+    
+    #barra{
+        left: -100vw;
+        position: absolute;
+        width: 50%;
+        height: calc(100vh - 4em);
+        top: 4em;
+        transition: all 500ms;
+
+        background-color: white;
+        color: #274c77;
+        text-align: left;
+        padding-left: 1rem;
+    }
+
+    nav{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
+    
+    #bur li {
+        list-style: none;
+        text-indent: -100px;
+        overflow: hidden;
+        margin-top: .75em;
+        width: 1.5em;
+    }
+    
+    #bur li a {
+        background: url("img/menu.svg") no-repeat center center;
+        background-size: cover;
+        display: block;
+        height: 1.5em;
+    }
+    
+    #bur li:last-child{
+        display: none;
+    }
+    
+    nav:target #barra{
+        left: 0;
+    }
+    
+    nav:target #bur li:last-child{
+        display: block;
+    }
+    
+    nav:target #bur li:first-child{
+        display: none;
+    }
+}
+
+
+
+@media screen and (min-width: 700px) {
+    
+    main section{
+
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: stretch;
+        gap: 0;
+    }
+
+    article{
+        width: 350px;
+
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .salud{
+        flex: 1 250px;
+    }
+
+    .ayuda{
+        flex: 1 250px;
+    }
+
+    .alrededor{
+        flex: 3 250px;
+    }
+
+    .d-flex{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;   
+        align-items: center;
+    }
+
+    .flexbox-1 {
+        display: flex;
+        flex-direction: row;
+        align-items: self-start;
+        padding-bottom: 50px;
+    }
+
+    footer div div p{
+        max-width: 500px;
+    }
+
+}
+
+@media screen and (min-width: 900px){
+
+    #bur{
+        display: none;
+    }
+    
+    header,
+    section,
+    footer{
+        height: auto;
+        max-width: 1920px;
+        margin: auto;
+    }
+    
+     h1{
+        display: inline-block;
+        vertical-align: middle;
+        font-size: 0;
+        background: url(img/Logo.svg) no-repeat center center scroll;
+        width: 100px;
+        height: auto;
+    }
+    
+    #menu{
+        display: inline-block;
+        width: 70%;
+        vertical-align: middle;
+    }
+
+    #barra{
+        position: static;
+        height: auto;
+        text-align: right;
+        background: none;
+    }
+
+    article{
+        max-width: 400px;
+
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .salud{
+        flex: 1 300px;
+    }
+
+    .ayuda{
+        flex: 1 300px;
+    }
+
+    .alrededor{
+        flex: 1 300px;
+    }
+
+    .datos{
+        max-width: 30vw;
+    }
+
+}
